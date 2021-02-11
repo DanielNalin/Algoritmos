@@ -10,6 +10,10 @@ int i,soma,j,res1,res2,k,x;
     for(i=0;i<11;i++){  
         numcpf[i]=cpf[i]-48;  
     }  
+    verificar(numcpf)
+return 0;  
+}
+void verificar(){
     for(i=0;i<9;i++){  
         soma+=numcpf[i]*(10-i);  
     }  
@@ -34,6 +38,5 @@ int i,soma,j,res1,res2,k,x;
         printf("Eh valido");  
     }else{  
         printf("Nao eh valido");  
-    }  
-return 0;  
+    }
 }
