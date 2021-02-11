@@ -2,26 +2,20 @@
 void verificar(int numcpf[12]){
 int i,soma,j,res1,res2,k,x;
 int index = 0;
-int counter = 0;
-    for(int i = 0; i < 12; i++){
-        if(numcpf[i] < '0' || numcpf[i] > '9'){
-            printf("Numero invalido");
-        return;
-        }
-    }
+	int counter = 0;
 	while (index < 10 && counter < 11) {
 		counter = 0;
 		
 		for (int j = 0; j < 12; j++) {
-			if (numcpf[j] == j)
+			if (numcpf[j] == index)
 				counter++;
 		}
 		
 		index++;
 	}
-	if(counter >= 11){
-	    printf("Nao eh valido");
-	    return;
+	
+	if (counter >= 11) {
+		printf("Não é valido");
 	}
     for(i=0;i<9;i++){  
         soma+=numcpf[i]*(10-i);  
