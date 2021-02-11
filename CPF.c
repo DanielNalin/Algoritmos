@@ -1,19 +1,7 @@
 #include <stdio.h>  
-  
-int main()  
-{  
-char cpf[12];  
-int numcpf[12];  
+
+void verificar(int numcpf[12]){
 int i,soma,j,res1,res2,k,x;
-    soma = 0;
-    scanf(" %s",cpf);  
-    for(i=0;i<11;i++){  
-        numcpf[i]=cpf[i]-48;  
-    }  
-    verificar(numcpf)
-return 0;  
-}
-void verificar(){
     for(i=0;i<9;i++){  
         soma+=numcpf[i]*(10-i);  
     }  
@@ -39,4 +27,17 @@ void verificar(){
     }else{  
         printf("Nao eh valido");  
     }
+}
+int main()  
+{  
+char cpf[12];  
+int numcpf[12];  
+int i,soma,j,res1,res2,k,x;
+    soma = 0;
+    scanf(" %s",cpf);  
+    for(i=0;i<11;i++){  
+        numcpf[i]=cpf[i]-48;  
+    }  
+    verificar(numcpf);
+return 0;  
 }
