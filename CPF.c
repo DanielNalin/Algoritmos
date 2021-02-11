@@ -1,7 +1,18 @@
 #include <stdio.h>  
-
 void verificar(int numcpf[12]){
 int i,soma,j,res1,res2,k,x;
+int index = 0;
+	int counter = 0;
+	while (index < 10 && counter < 11) {
+		counter = 0;
+		
+		for (int j = 0; j < 12; j++) {
+			if (numcpf[j] == j)
+				counter++;
+		}
+		
+		index++;
+	}
     for(i=0;i<9;i++){  
         soma+=numcpf[i]*(10-i);  
     }  
