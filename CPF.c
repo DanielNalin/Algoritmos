@@ -21,6 +21,7 @@ int counter = 0;
 	}
 	if(counter >= 11){
 	    printf("Nao eh valido");
+	    return;
 	}
     for(i=0;i<9;i++){  
         soma+=numcpf[i]*(10-i);  
