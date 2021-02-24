@@ -4,7 +4,7 @@ char name[100];
 int j;
 char initials[20];
 int previousSpace;
-    scanf("%s", name);
+    fgets(name, 100, stdin);
     previousSpace = 1;
     for (int i = 0; i < 100; i++){
     if (name[i] == '\0'){
