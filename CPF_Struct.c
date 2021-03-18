@@ -10,11 +10,11 @@ int main()
 {
     pessoal pessoa[QUANTIDADE];
     for (int i = 0; i < QUANTIDADE; i++){
-        scanf("%s %d %s", pessoal[i].nome, &pessoal[i].idade, pessoal[i].cpf);
+        scanf("%s %d %s", pessoa[i].nome, &pessoa[i].idade, pessoa[i].cpf);
     }
     for (int i = 0; i < QUANTIDADE; i++){
         if(validarcpf(pessoal[i].cpf)){
-            printf("%s - %d - %s\n", pessoal[i].nome, pessoal[i].idade, pessoal[i].cpf);
+            printf("%s - %d - %s\n", pessoa[i].nome, pessoa[i].idade, pessoa[i].cpf);
         }
     }
     return 0;
