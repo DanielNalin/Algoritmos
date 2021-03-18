@@ -5,7 +5,7 @@ typedef struct pessoa{
     char nome[20];
     int idade;
     char cpf[11];
-} pessoal
+} pessoal;
 int main()
 {
     char cpf[11];
