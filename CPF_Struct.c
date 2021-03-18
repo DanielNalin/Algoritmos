@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#define quantidade 10
+#define QUANTIDADE 10
 typedef struct pessoa{
     char nome[20];
     int idade;
@@ -8,11 +8,15 @@ typedef struct pessoa{
 } pessoal;
 int main()
 {
-    char cpf[11];
-
-    scanf("%s", cpf);
-
-    validarcpf(cpf);
+    pessoal pessoa[QUANTIDADE];
+    for (int i = 0; i < QUANTIDADE; i++){
+        scanf("%s %d %s", pessoal[i].nome, &pessoal[i].idade, pessoal[i].cpf);
+    }
+    for (int i = 0; i < QUANTIDADE; i++){
+        if(validarcpf(pessoal[i].cpf)){
+            printf("%s - %d - %s\n", pessoal[i].nome, pessoal[i].idade, pessoal[i].cpf);
+        }
+    }
     return 0;
 }
 int validarcpf(char *cpf)
