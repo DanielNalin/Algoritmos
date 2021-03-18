@@ -29,7 +29,6 @@ int validarcpf(char *cpf)
       (strcmp(cpf, "66666666666") == 0) || (strcmp(cpf, "77777777777") == 0) || (strcmp(cpf, "88888888888") == 0) ||
       (strcmp(cpf, "99999999999") == 0))
   {
-    printf("Nao eh valido");
     return 0;
   }
 
@@ -39,7 +38,6 @@ int validarcpf(char *cpf)
 
     if (couldNumber < 0 && couldNumber > 9)
     {
-      printf("Numero invalido");
       return 0;
     }
     else
@@ -85,11 +83,11 @@ int validarcpf(char *cpf)
 
   if ((j == numcpf[9]) && (k == numcpf[10]))
   {
-    printf("Eh valido");
+    return 1;
   }
   else
   {
-    printf("Nao eh valido");
+    return 0;
   }
   return 0;
 }
