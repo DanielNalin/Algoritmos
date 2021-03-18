@@ -13,7 +13,7 @@ int main()
         scanf("%s %d %s", pessoa[i].nome, &pessoa[i].idade, pessoa[i].cpf);
     }
     for (int i = 0; i < QUANTIDADE; i++){
-        if(validarcpf(pessoal[i].cpf)){
+        if(validarcpf(pessoa[i].cpf)){
             printf("%s - %d - %s\n", pessoa[i].nome, pessoa[i].idade, pessoa[i].cpf);
         }
     }
