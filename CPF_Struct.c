@@ -6,19 +6,6 @@ typedef struct pessoa{
     int idade;
     char cpf[11];
 } pessoal;
-int main()
-{
-    pessoal pessoa[QUANTIDADE];
-    for (int i = 0; i < QUANTIDADE; i++){
-        scanf("%s %d %s", pessoa[i].nome, &pessoa[i].idade, pessoa[i].cpf);
-    }
-    for (int i = 0; i < QUANTIDADE; i++){
-        if(validarcpf(pessoa[i].cpf)){
-            printf("%s - %d - %s\n", pessoa[i].nome, pessoa[i].idade, pessoa[i].cpf);
-        }
-    }
-    return 0;
-}
 int validarcpf(char *cpf)
 {
   int numcpf[12];
@@ -90,4 +77,17 @@ int validarcpf(char *cpf)
     return 0;
   }
   return 0;
+}
+int main()
+{
+    pessoal pessoa[QUANTIDADE];
+    for (int i = 0; i < QUANTIDADE; i++){
+        scanf("%s %d %s", pessoa[i].nome, &pessoa[i].idade, pessoa[i].cpf);
+    }
+    for (int i = 0; i < QUANTIDADE; i++){
+        if(validarcpf(pessoa[i].cpf)){
+            printf("%s - %d - %s\n", pessoa[i].nome, pessoa[i].idade, pessoa[i].cpf);
+        }
+    }
+    return 0;
 }
