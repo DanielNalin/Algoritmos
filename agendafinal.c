@@ -136,24 +136,47 @@ int main(int argc, char const *argv[])
       Pessoa p;
       Telefone t;
       Email e;
+      char temp = 'Y';
       p.id = ++ulid;
       t.id = ++ulidt;
       e.id = ++ulide;
       printf("Digite o nome\n");
       scanf("%s", p.nome);
 
-      printf("Digite o telefone\n");
-      scanf("%s", t.telefone);
-      t.idpessoa = p.id;
-      printf("Digite o email\n");
-      scanf("%s", e.email);
-      e.idpessoa = p.id;
+      do
+      {
+        t.idpessoa = p.id;
+        printf("Digite o telefone\n");
+        scanf("%s", t.telefone);
+        printf("%d", contt);
+        printf("test");
+        tel[contt] = t;
+        contt++;
+        printf("Add another phone number? (Y/N)"); // REWRITE THIS
+        scanf("%c", temp);
+        while (temp != 'Y' && temp != 'N')
+        {
+          scanf("%c", temp);
+        }
+      } while (temp == 'Y');
+
+      do
+      {
+        e.idpessoa = p.id;
+        printf("Digite o email\n");
+        scanf("%s", e.email);
+        em[conte] = e;
+        conte++;
+        printf("Add another email? (Y/N)"); // REWRITE THIS
+        scanf("%c", temp);
+        while (temp != 'Y' && temp != 'N')
+        {
+          scanf("%c", temp);
+        }
+      } while (temp == 'Y');
+
       pessoa[cont] = p;
-      tel[contt] = t;
-      em[conte] = e;
       cont++;
-      contt++;
-      conte++;
       break;
     }
     case 2:
@@ -173,7 +196,6 @@ int main(int argc, char const *argv[])
     }
     case 3:
     {
-      
     }
     default:
     {
