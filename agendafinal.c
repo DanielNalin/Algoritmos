@@ -140,7 +140,6 @@ int main(int argc, char const *argv[])
       p.id = ++ulid;
       printf("Digite o nome\n");
       scanf("%s", p.nome);
-
       do
       {
         t.id = ++ulidt;
@@ -156,7 +155,6 @@ int main(int argc, char const *argv[])
           scanf("%c", &temp);
         }
       } while (temp == 'S');
-
       do
       {
         e.id = ++ulide;
