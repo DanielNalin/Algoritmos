@@ -136,44 +136,42 @@ int main(int argc, char const *argv[])
       Pessoa p;
       Telefone t;
       Email e;
-      char temp = 'Y';
+      char temp = 'S';
       p.id = ++ulid;
-      t.id = ++ulidt;
-      e.id = ++ulide;
       printf("Digite o nome\n");
       scanf("%s", p.nome);
 
       do
       {
-        t.idpessoa = p.id;
+        t.id = ++ulidt;
         printf("Digite o telefone\n");
         scanf("%s", t.telefone);
-        printf("%d", contt);
-        printf("test");
+        t.idpessoa = p.id;
         tel[contt] = t;
         contt++;
-        printf("Add another phone number? (Y/N)"); // REWRITE THIS
-        scanf("%c", temp);
-        while (temp != 'Y' && temp != 'N')
+        printf("Deseja adicionar outro número? (S/N)");
+        scanf("%c", &temp);
+        while (temp != 'S' && temp != 'N')
         {
-          scanf("%c", temp);
+          scanf("%c", &temp);
         }
-      } while (temp == 'Y');
+      } while (temp == 'S');
 
       do
       {
+        e.id = ++ulide;
         e.idpessoa = p.id;
         printf("Digite o email\n");
         scanf("%s", e.email);
         em[conte] = e;
         conte++;
-        printf("Add another email? (Y/N)"); // REWRITE THIS
-        scanf("%c", temp);
-        while (temp != 'Y' && temp != 'N')
+        printf("Deseja adicionar outro email? (S/N)");
+        scanf("%c", &temp);
+        while (temp != 'S' && temp != 'N')
         {
-          scanf("%c", temp);
+          scanf("%c", &temp);
         }
-      } while (temp == 'Y');
+      } while (temp == 'S');
 
       pessoa[cont] = p;
       cont++;
@@ -196,6 +194,9 @@ int main(int argc, char const *argv[])
     }
     case 3:
     {
+      int id;
+      printf("digite o id\n");
+      scanf("%d", &id);
     }
     default:
     {
