@@ -322,7 +322,7 @@ int main(int argc, char const *argv[])
       {
         if (tel[i].idpessoa == id)
         {
-          printf("Encontrado telefone de número %s para o usuário. Gostaria de mudá-lo? (S/N)", tel[i].telefone);
+          printf("Encontrado telefone de número %s para o usuário. Gostaria de mudá-lo? (S/N): ", tel[i].telefone);
           scanf("%c", &temp);
           while (temp != 'S' && temp != 'N')
           {
@@ -341,7 +341,7 @@ int main(int argc, char const *argv[])
       {
         if (em[i].idpessoa == id)
         {
-          printf("Encontrado email %s para o usuário. Gostaria de mudá-lo? (S/N)", em[i].email);
+          printf("Encontrado email %s para o usuário. Gostaria de mudá-lo? (S/N): ", em[i].email);
           scanf("%c", &temp);
           while (temp != 'S' && temp != 'N')
           {
